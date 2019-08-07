@@ -1,0 +1,99 @@
+// Styles for a person.
+
+.person {
+
+  &__info {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 1em 0;
+    padding: 1em 1.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+    position: relative;
+    z-index: 200;
+    
+    img {
+      border-radius: 50%;
+      margin: 0 2em 0 0;
+    }
+  }
+
+  &__name-location {
+    line-height: 1.6;
+  }
+
+  &__name {
+    color: $red;
+    font-size: 1.2em;
+  }
+
+  &__location {
+    color: $dark-gray;
+    font-size: .9em;
+  }
+  
+  &__expand {
+    margin-left: auto;
+    color: $dark-gray;
+    font-size: 1.5em;
+    transition: .3s ease-in-out;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__contact-info {
+    width: 95%;
+    background: $pink-gradient;
+    margin: 0 auto -1em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    top: -1em;
+    z-index: 100;
+    transition: .3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+
+    @include respond-to('m') {
+      flex-direction: row;
+    }
+
+    &.open {
+      max-height: 300px;
+    }
+
+    span {
+      font-size: 1.2em;
+      line-height: 1.6;
+      display: block;
+      width: 100%;
+      padding: 1em 0;
+  
+      &:first-child {
+        border-bottom: 1px solid $transparent-gray;
+      }  
+
+      @include respond-to('m') {
+        line-height: 2;
+        width: 50%;
+        padding: 2em 0;
+
+        &:first-child {
+          border-right: 1px solid $transparent-gray;
+          border-bottom: 0;
+        }  
+      }
+
+    }
+    
+    a {
+      display: block;
+      color: #fff;
+    }
+  }
+}

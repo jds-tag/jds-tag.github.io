@@ -1,0 +1,17 @@
+// Styles for the header.
+
+header {
+  background: $pink-gradient;
+  padding: 2.5em 1.5em 1em;
+  position: relative;
+
+  @include respond-to('m') {
+    padding: 2.5em 2em 1em;
+  }
+
+  .menu {
+    font-size: 1.5em;
+    float: left;
+    margin: .35em 0 0;
+  }
+}

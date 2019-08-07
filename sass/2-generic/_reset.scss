@@ -1,0 +1,38 @@
+// Reset styles.
+
+* {
+  box-sizing: border-box;
+}
+  
+html {
+  // fix the zooming on mobile safari orientation change
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: $body-copy;
+  background: $gray;
+  color: $white;
+}
+  
+button {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  font-size: 1em;
+}
+  
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  
+  li {
+    list-style: none;
+  }
+}
